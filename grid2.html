@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid 2</title>
+    <style>
+        body {
+            display: grid;
+            grid-template-areas:
+            " uno uno uno uno"
+            "dos tres cuatro cinco"
+            "dos seis cuatro cinco"
+            "dos seis siete cinco"
+            "dos seis ocho nueve";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 4fr 1fr 1fr 1fr 1fr 1 fr;
+            height: 100%;
+            width: 1000px;
+            color: white;
+            font-size: 30px;
+            gap: 5px;
+        }
+
+        #primero {
+            grid-area: uno;
+            background-color: yellow;
+        }
+
+        #segundo {
+            grid-area: dos;
+            background-color: red;
+        }
+
+        #tercero {
+            grid-area: tres;
+            background-color: blue;
+        }
+
+        #cuarto {
+            grid-area: cuatro;
+            background-color: orangered;
+        }
+
+        #quinto {
+            grid-area: cinco;
+            background-color: lawngreen;
+        }
+
+        #sexto {
+            grid-area: seis;
+            background-color: forestgreen;
+        }
+
+        #septimo {
+            grid-area: siete;
+            background-color: royalblue;
+        }
+
+        #octavo {
+            grid-area: ocho;
+            background-color: rosybrown;
+        }
+
+        #noveno {
+            grid-area: nueve;
+            background-color: aqua;
+        }
+
+      @media (max-width:700px) { /*TAMAÑNO maximo DE PANTALLA 900PX altura, despues de eso no se aplica lo de abajo */
+
+            body {
+            display: grid;
+            grid-template-areas:
+            " uno uno uno uno"
+            "dos dos dos dos"
+            "cinco cinco cinco cinco"
+            "seis seis seis seis";
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            height: 600px;
+            width: 600px;
+            color: white;
+            gap: 5px;
+            }
+           #tercero,#cuarto,#septimo,#octavo,#noveno{
+            display: none;}
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="primero">primero</div>
+    <div id="segundo">segundo</div>
+    <div id="tercero">tercero</div>
+    <div id="cuarto">cuarto</div>
+    <div id="quinto">quinto</div>
+    <div id="sexto">sexto</div>
+    <div id="septimo">septimo</div>
+    <div id="octavo">octavo</div>
+    <div id="noveno">noveno</div>
+</body>
+
+</html>

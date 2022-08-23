@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Grid css 4</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+    <style>
+        * {
+            margin: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+
+        body {
+            grid-template-areas: "header header"
+                "nav article"
+                "nav ads"
+                "footer footer";
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            gap: 5px;
+            max-height: 100vh;
+            max-width: 100vw;
+            display: grid;
+        }
+
+        header {
+            grid-area: header;
+            background-color: aquamarine;
+            align-items: center;
+            text-align: center;
+        }
+
+        nav {
+            grid-area: nav;
+            background-color: greenyellow;
+        }
+
+        #ads {
+            grid-area: ads;
+            background-color: blue;
+        }
+
+        article {
+            grid-area: article;
+            background-color: rgb(173, 79, 189);
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: orange;
+        }
+        video{
+            ;
+        }
+        @media (max-width:450px) {
+            * {
+                font-size: 1.2rem;
+            }
+
+            body {
+                grid-template-areas: "header"
+                    "article"
+                    "footer";
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 3fr 1fr;
+                gap: 5px;
+                max-height: 100vh;
+                max-width: 100vw;
+                display: grid;
+            }
+
+            .not-for-mobile {
+                display: none;
+            }
+        }
+        .cent{
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        Pagina de Anime
+    </header>
+    <nav class="not-for-mobile">
+        Commentaries
+    </nav>
+    <article class="cent">
+        <p>Videos</p>
+        <DIV
+            <div align="center">
+                <video src="/Ejercicios/Animes/spy7.mp4" controls></video>
+            </di>
+            <hr>
+        </DIV>
+
+    </article>
+    <section id="ads" class="not-for-mobile">
+        Ads
+    </section>
+    <footer>
+        Footer
+    </footer>
+</body>
+
+</html>
